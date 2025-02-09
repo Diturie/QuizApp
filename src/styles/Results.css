@@ -99,8 +99,8 @@
     }
 
     .results table {
-        max-width: 100%;
-        width: 100%; /* Siguron që tabela zë gjithë ekranin */
+        max-width: 80;
+        width: 80%;
         font-size: 0.85rem;
     }
 
