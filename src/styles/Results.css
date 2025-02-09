@@ -9,27 +9,18 @@
     padding: 20px;
     text-align: center;
     padding-top: 50px; 
-}
-
-.results h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #e94560;
-    display: block; 
-    visibility: visible;
-}
-
-.results p {
-    font-size: 1.2rem;
-    margin-bottom: 0px;
-    display: block; /* Siguron që është i dukshëm */
+    overflow-y: auto; /* Aktivizon skrollimin vertikal */
+    overflow-x: hidden; /* Fshin skrollimin horizontal */
 }
 
 .results table {
+    position: sticky; /* Bën tabelën statike */
+    top: 0; /* Pozicionohet në fillim të kontejnerit */
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 500px;
     border-collapse: collapse;
-    margin-top: 20px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -71,8 +62,12 @@
     transform: scale(1.05);
 }
 
-/* Responsive Design */
+/* Responsive Design për tablet dhe telefon */
 @media (max-width: 768px) {
+    .results {
+        padding: 10px;
+    }
+
     .results h2 {
         font-size: 1.5rem;
     }
@@ -83,14 +78,17 @@
 
     .results table {
         max-width: 90%;
+        width: 100%;
     }
 
-    .results th, .results td {
+    .results th,
+    .results td {
         font-size: 0.9rem;
         padding: 10px;
     }
 }
 
+/* Responsive Design për ekranet e vogla (telefon) */
 @media (max-width: 480px) {
     .results h2 {
         font-size: 1.2rem;
@@ -102,15 +100,22 @@
 
     .results table {
         max-width: 100%;
+        width: 100%; /* Siguron që tabela zë gjithë ekranin */
         font-size: 0.85rem;
     }
 
-    .results th, .results td {
+    .results th,
+    .results td {
         padding: 8px;
     }
 
     .back-button {
         font-size: 0.9rem;
         padding: 10px;
+    }
+
+    .results {
+        overflow-y: auto; /* Aktivizon lëvizjen vertikale */
+        overflow-x: hidden; /* Nuk lejon lëvizje horizontale */
     }
 }
