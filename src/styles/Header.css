@@ -1,3 +1,4 @@
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -17,11 +18,12 @@
     font-style: italic;
   }
   
-  .nav {
-    display: flex;
-    gap: 15px; 
-    flex-wrap: wrap;
-  }
+/* Navigimi për desktop */
+.nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
   
   .category-button {
     background: none;
@@ -77,14 +79,48 @@
     background-color: #6f22b8;
   }
   
-  /* Responsiveness */
   @media (max-width: 768px) {
+    /* Fshi navigimin klasik dhe shfaq hamburgerin */
     .nav {
-      display: none; 
+        display: none;
     }
-  
+
     .hamburger-menu {
-      display: block; 
+        display: block;
     }
-  }
-  
+
+    .logo {
+        font-size: 1.3rem; /* Redukto madhësinë e fontit për pajisje të vogla */
+    }
+
+    .header {
+        padding: 10px 15px; /* Redukto padding në telefon */
+    }
+
+    .category-button {
+        padding: 5px 10px; /* Më pak hapësirë për butonat */
+    }
+
+    .menu-items {
+        max-height: 100vh; /* Siguro që menuja mos të dalë jashtë ekranit */
+    }
+}
+
+/* Përgjigje për pajisje shumë të vogla (ekran më i ngushtë se 480px) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem; /* Bëje logon akoma më të vogël */
+    }
+
+    .category-button {
+        font-size: 0.9rem; /* Ul madhësinë e fontit në butonat */
+    }
+
+    .menu-items button {
+        font-size: 0.9rem; /* Rregullo madhësinë e fontit në menu */
+    }
+
+    .header {
+        padding: 8px 10px; /* Pak më kompakte në ekran shumë të vogël */
+    }
+}

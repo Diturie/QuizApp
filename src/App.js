@@ -62,7 +62,7 @@ const App = () => {
 
 const AppWrapper = () => {
   return (
-    <Router>
+    <Router basename="/QuizApp">
       <App />
     </Router>
   );
