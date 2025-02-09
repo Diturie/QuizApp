@@ -1,0 +1,90 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    background-color: #8a2be2;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.7rem; 
+    font-weight: bold;
+    flex: 0; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap;
+  }
+  
+  .category-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px 10px; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .category-button:hover {
+    background-color: #6f22b8;
+    border-radius: 5px;
+  }
+  
+  
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  
+  .menu-items {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #8a2be2;
+    padding: 10px;
+    z-index: 10;
+  }
+  
+  .menu-items.show {
+    display: flex; 
+  }
+  
+  .menu-items button {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .menu-items button:hover {
+    background-color: #6f22b8;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .nav {
+      display: none; 
+    }
+  
+    .hamburger-menu {
+      display: block; 
+    }
+  }
+  

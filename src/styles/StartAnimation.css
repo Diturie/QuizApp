@@ -1,0 +1,42 @@
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    color: #b369e8;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out, glow 2s infinite alternate;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+ @keyframes glow {
+  from {
+    text-shadow: 0 0 10px #9262c0, 0 0 20px #53376d, 0 0 30px #8a2be2;
+  }
+  to {
+    text-shadow: 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2;
+  }
+}
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .animation-container {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .animation-container {
+      font-size: 1.5rem;
+    }
+  }

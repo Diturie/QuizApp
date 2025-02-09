@@ -1,0 +1,116 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100vh;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    padding-top: 50px; 
+}
+
+.results h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e94560;
+    display: block; 
+    visibility: visible;
+}
+
+.results p {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    display: block; /* Siguron që është i dukshëm */
+}
+
+.results table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.results th,
+.results td {
+    padding: 12px;
+    border: 1px solid #8a2be2;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.results th {
+    background-color: #8a2be2;
+    color: white;
+    font-weight: bold;
+}
+
+.results td {
+    background-color: white;
+}
+
+.back-button {
+    margin-top: 30px; /* E shtyn butonin më lart */
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #6f22b8;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results h2 {
+        font-size: 1.5rem;
+    }
+
+    .results p {
+        font-size: 1rem;
+    }
+
+    .results table {
+        max-width: 90%;
+    }
+
+    .results th, .results td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .results h2 {
+        font-size: 1.2rem;
+    }
+
+    .results p {
+        font-size: 0.9rem;
+    }
+
+    .results table {
+        max-width: 100%;
+        font-size: 0.85rem;
+    }
+
+    .results th, .results td {
+        padding: 8px;
+    }
+
+    .back-button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
