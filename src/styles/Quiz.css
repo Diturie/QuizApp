@@ -3,40 +3,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #ffffff;
-    color: black;
+    min-height: 100vh;
+    background-color:white;
+    color: #333;
     padding: 20px;
 }
 
 .quiz-container {
     border: 3px solid #8a2be2;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 30px;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 90%;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
     text-align: center;
     position: relative;
 }
 
 .timer {
     position: absolute;
-    top: 10px;
-    left: 83%;
-    transform: translateX(50%);
+    top: 15px;
+    right: 15px;
     font-size: 1rem;
-    color: black;
+    color: #333;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #f9f9f9;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 2px solid #8a2be2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .quiz h2 {
@@ -45,9 +45,16 @@
     color: #8a2be2;
 }
 
-.quiz p {
+.quiz h3 {
     font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.quiz p {
+    font-size: 1.1rem;
     margin-bottom: 20px;
+    color: #444;
 }
 
 .quiz .options {
@@ -56,49 +63,59 @@
     align-items: center;
     gap: 15px;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 20px auto;
 }
 
 .quiz .options button {
-    padding: 12px;
+    padding: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #8a2be2;
     color: white;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
+    text-align: center;
 }
 
 .quiz .options button:hover {
     background-color: #ac6de8;
+    transform: scale(1.05);
+}
+
+.quiz .options button:active {
+    background-color: #7a20c7;
 }
 
 .navigation-buttons {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center; /* Qendërzo butonat */
+    gap: 20px; /* Hapësirë midis butonave */
     width: 100%;
-    max-width: 500px;
-    margin-top: 15px;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-left: 90px;
 }
 
 .navigation-buttons button {
     padding: 12px 20px;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #8a2be2;
     color: white;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     width: 45%;
 }
 
 .navigation-buttons button:hover {
     background-color: #ac6de8;
+    transform: scale(1.05);
 }
 
 .navigation-buttons button:disabled {
@@ -106,58 +123,22 @@
     cursor: not-allowed;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .quiz-container {
-        padding: 20px;
-        width: 95%;
-    }
-
-    .timer {
-        top: 10px;
-        left: 75%;
-        width: 45px;
-        height: 45px;
-        font-size: 0.9rem;
-    }
-
-    .quiz h2 {
-        font-size: 1.5rem;
-    }
-
-    .quiz p {
-        font-size: 1rem;
-    }
-
-    .quiz .options {
-        max-width: 300px;
-    }
-
-    .navigation-buttons {
-        max-width: 300px;
-        flex-direction: row;
-    }
-
-    .navigation-buttons button {
-        width: 48%;
-    }
-}
-
 @media (max-width: 480px) {
     .quiz-container {
         padding: 15px;
+        max-width: 300px;
     }
 
     .timer {
         top: 10px;
-        left: 78%;
+        right: 10px;
         width: 40px;
         height: 40px;
         font-size: 0.8rem;
     }
 
     .quiz h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .quiz p {
@@ -170,13 +151,17 @@
     }
 
     .navigation-buttons {
-        max-width: 100%;
-        flex-direction: row;
+        max-width: 100%; /* Butonat mbulojnë gjerësinë totale të kontejnerit */
+        display: flex;
+        flex-direction: row; /* Butonat do të jenë në të njëjtin rresht */
+        justify-content: space-between; /* Vendos një në anën e majtë dhe tjetrin në të djathtë */
+        gap: 10px; /* Hapësirë midis butonave */
+        margin-left:0px;
     }
 
     .navigation-buttons button {
         font-size: 0.9rem;
         padding: 10px;
-        width: 48%;
+        width: 48%; /* Secili buton do të mbulojë gjysmën e gjerësisë së hapësirës totale */
     }
 }
